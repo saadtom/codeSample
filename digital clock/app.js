@@ -17,11 +17,12 @@ function clock() {
 
 	var currentTime = hours + ":"+ minutes + ":" + seconds;
 	document.getElementById("clock").innerHTML = " "; 
-	var timeParagragh = document.createElement("h1");
+	var timeParagraph = document.createElement("h1");
 	var ampm = document.createElement("h1");
-	    timeParagragh.innerHTML = currentTime; 
+	    timeParagraph.innerHTML = currentTime; 
+	    timeParagraph.style.width = "250px"; 
 	    ampm.innerHTML = morningOrNoon;
-		$("#clock").append(timeParagragh);
+		$("#clock").append(timeParagraph);
 		$("#clock").append(ampm);
 
 	var todayParagragh = document.createElement("p"); 
