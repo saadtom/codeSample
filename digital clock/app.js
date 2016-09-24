@@ -1,7 +1,8 @@
 function clock() {
+	// let's use the date object
 	var someDate = new Date();
 	var year = someDate.getFullYear(); 
-	var month = someDate.getMonth();
+	var month = someDate.getMonth() + 1;
 	var day = someDate.getDate(); 
 	var hours = someDate.getHours();
 	var minutes = someDate.getMinutes(); 
@@ -16,6 +17,8 @@ function clock() {
 	}
 
 	var currentTime = hours + ":"+ minutes + ":" + seconds;
+
+	//now let's append the time that we made to our web page
 	document.getElementById("clock").innerHTML = " "; 
 	var timeParagraph = document.createElement("h1");
 	var ampm = document.createElement("h1");
@@ -30,4 +33,5 @@ function clock() {
 		$("#clock").append(todayParagragh); 
 }
 
+//using the interval we will run the clock function each second 
 setInterval(clock,1000); 
