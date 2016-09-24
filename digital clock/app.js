@@ -28,9 +28,9 @@ function clock() {
 		$("#clock").append(timeParagraph);
 		$("#clock").append(ampm);
 
-	var todayParagragh = document.createElement("p"); 
-		todayParagragh.innerHTML = today + "<br>" + month + "/" + day + "/" + year;
-		$("#clock").append(todayParagragh); 
+	var todayParagraph = document.createElement("p"); 
+		todayParagraph.innerHTML = today + "<br>" + month + "/" + day + "/" + year;
+		$("#clock").append(todayParagraph); 
 }
 
 //using the interval we will run the clock function each second 
