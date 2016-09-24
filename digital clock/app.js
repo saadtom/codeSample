@@ -28,6 +28,7 @@ function clock() {
 		$("#clock").append(timeParagraph);
 		$("#clock").append(ampm);
 
+	// now let's append the date as well 
 	var todayParagraph = document.createElement("p"); 
 		todayParagraph.innerHTML = today + "<br>" + month + "/" + day + "/" + year;
 		$("#clock").append(todayParagraph); 
