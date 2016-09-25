@@ -8,15 +8,11 @@ function clock() {
 	var minutes = someDate.getMinutes(); 
 	var seconds = someDate.getSeconds(); 
 	var morningOrNoon = "AM"; 
-	var daysOfTheWeek = ["Monday", "Tuesday", "wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+	var daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "wednesday", "Thursday", "Friday", "Saturday"];
 	var today; 
 
 	// let's find what day of the week is today
-	if (someDate.getDay() !== 0) {
-		today = daysOfTheWeek[someDate.getDay() - 1];
-	} else {
-		today = "Sunday"; 
-	}
+	today = daysOfTheWeek[someDate.getDay()];
 
 	if (hours > 12) {
 		hours = hours - 12; 
