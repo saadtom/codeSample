@@ -17,7 +17,7 @@ function clock() {
 	if (hours > 12) {
 		hours = hours - 12; 
 		morningOrNoon = "PM"; 
-	} else if (hours = 12 ) {
+	} else if (hours == 12 ) {
 		morningOrNoon = "PM"; 
 	}
 
