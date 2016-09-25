@@ -8,11 +8,21 @@ function clock() {
 	var minutes = someDate.getMinutes(); 
 	var seconds = someDate.getSeconds(); 
 	var morningOrNoon = "AM"; 
-	var daysOfTheWeek = ["Monday", "Tuesday", "wednesday", "Thursday", "Friday", "Saturday", "Sunday"]; 
+	var daysOfTheWeek = ["Monday", "Tuesday", "wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+	var today; 
 
-	var today = daysOfTheWeek[someDate.getDay() - 1];
+	// let's find what day of the week is today
+	if (someDate.getDay() !== 0) {
+		today = daysOfTheWeek[someDate.getDay() - 1];
+	} else {
+		today = "Sunday"; 
+	}
+
 	if (hours > 12) {
 		hours = hours - 12; 
+	}
+
+	if (hours >= 12) {
 		morningOrNoon = "PM"; 
 	}
 
