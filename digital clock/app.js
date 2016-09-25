@@ -13,12 +13,11 @@ function clock() {
 	// let's find what day of the week is today
 	var today = daysOfTheWeek[someDate.getDay()];
 
+	// if this is afternoon time the clock should show PM 
 	if (hours > 12) {
 		hours = hours - 12; 
-	}
-
-	// if this is afternoon time the clock should show PM 
-	if (hours >= 12) {
+		morningOrNoon = "PM"; 
+	} else if (hours = 12 ) {
 		morningOrNoon = "PM"; 
 	}
 
