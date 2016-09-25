@@ -9,10 +9,9 @@ function clock() {
 	var seconds = someDate.getSeconds(); 
 	var morningOrNoon = "AM"; 
 	var daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "wednesday", "Thursday", "Friday", "Saturday"];
-	var today; 
 
 	// let's find what day of the week is today
-	today = daysOfTheWeek[someDate.getDay()];
+	var today = daysOfTheWeek[someDate.getDay()];
 
 	if (hours > 12) {
 		hours = hours - 12; 
