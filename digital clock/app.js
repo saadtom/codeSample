@@ -22,6 +22,7 @@ function clock() {
 		hours = hours - 12; 
 	}
 
+	// if this is afternoon time the clock should show PM 
 	if (hours >= 12) {
 		morningOrNoon = "PM"; 
 	}
