@@ -42,4 +42,6 @@ function clock() {
 
 //using the interval we will run the clock function each second 
 setInterval(clock,1000); 
+
+// let's load that for the very first time to avoid waiting for one second that the interval will need to fire the clock function 
 window.onload = clock; 
