@@ -1,17 +1,17 @@
 function clock() {
 	// let's use the date object
-	var someDate = new Date();
-	var year = someDate.getFullYear(); 
-	var month = someDate.getMonth() + 1;
-	var day = someDate.getDate(); 
-	var hours = someDate.getHours(); 
-	var minutes = ("0" + someDate.getMinutes()).slice(-2); // here we are showing 2 digits for minutes
-	var seconds = ("0" + someDate.getSeconds()).slice(-2); // here we are showing 2 digits for seconds
+	var currentDate = new Date();
+	var year = currentDate.getFullYear(); 
+	var month = currentDate.getMonth() + 1;
+	var day = currentDate.getDate(); 
+	var hours = currentDate.getHours(); 
+	var minutes = ("0" + currentDate.getMinutes()).slice(-2); // here we are showing 2 digits for minutes
+	var seconds = ("0" + currentDate.getSeconds()).slice(-2); // here we are showing 2 digits for seconds
 	var morningOrNoon = "AM"; 
 	var daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "wednesday", "Thursday", "Friday", "Saturday"];
 
 	// let's find what day of the week is today
-	var today = daysOfTheWeek[someDate.getDay()];
+	var today = daysOfTheWeek[currentDate.getDay()];
 
 	// if this is afternoon time the clock should show PM 
 	if (hours > 12) {
