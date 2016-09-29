@@ -1,5 +1,6 @@
 function clock() {
 	// let's use the date object
+	var clock = document.getElementById("clock");
 	var currentDate = new Date();
 	var year = currentDate.getFullYear(); 
 	var month = currentDate.getMonth() + 1;
@@ -31,13 +32,13 @@ function clock() {
 	    timeParagraph.innerHTML = currentTime; 
 	    timeParagraph.style.width = "300px"; 
 	    ampm.innerHTML = morningOrNoon;
-		$("#clock").append(timeParagraph);
-		$("#clock").append(ampm);
+	    clock.appendChild(timeParagraph);
+	    clock.appendChild(ampm);
 
 	// now let's append the date as well 
 	var todayParagraph = document.createElement("p"); 
 		todayParagraph.innerHTML = today + "<br>" + month + "/" + day + "/" + year;
-		$("#clock").append(todayParagraph); 
+		clock.appendChild(todayParagraph); 
 }
 
 //using the interval we will run the clock function each second 
