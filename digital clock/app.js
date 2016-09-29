@@ -41,4 +41,5 @@ function clock() {
 }
 
 //using the interval we will run the clock function each second 
-setInterval(clock,1); 
+setInterval(clock,1000); 
+window.onload = clock; 
